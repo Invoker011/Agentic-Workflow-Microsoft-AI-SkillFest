@@ -4,19 +4,22 @@ description: Draft website updates for Mona's GitHub Info site from official Git
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 9 * * *'
+    - cron: '0 09 * * *'
+permissions:
+  contents: read
 safe-outputs:
   create-pull-request:
     title-prefix: "[mona] "
     draft: true
     fallback-as-issue: false
 tools:
-  edit:
-  web-fetch:
+  edit: {}
+  web-fetch: {}
 network:
   allowed:
     - github.com
     - github.blog
+
 ---
 
 # Update Mona's GitHub Info website
